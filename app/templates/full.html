@@ -1,0 +1,36 @@
+{% extends "base.html" %} 
+   {% block main %}  
+    
+      {% if user %} 
+        
+         <thead class="thead-dark">
+                
+            
+             <div class="border border-primary">  
+               <div class="row" style="">
+                 
+                  <div class="col">
+                    <img src="{{ url_for('static', filename='uploads/' + user.profile_picture) }}" class="mr-3 mt-3 rounded-circle" style="width:200px;height:200px;"/> 
+                   </div> 
+                   <div class="col" style="justify-items: center;">
+                    <h5>{{ user.first_name }} {{ user.last_name }}</h5>
+                    <p>{{ user.gender }}</p>
+                    <p>{{ user.location }}</p>  
+                    <p>{{ user.biography }}</p>
+                   </div> 
+                   <div class="col">
+                     <button class="btn btn-primary">Follow</button>
+                   </div> 
+                   <div>
+                       <button class="btn-success">Send Message</button>
+                   </div>
+             </div> 
+             </div>
+             <p>
+                
+             </p>
+           
+        </table>
+      {% endif %}
+     
+    {% endblock %}
