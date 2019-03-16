@@ -3,10 +3,10 @@
     
       {% if user %} 
         
-         <thead class="thead-dark">
+            <div style="padding-right:200px">
                 
-            
-             <div class="border border-primary">  
+             <div class="row" >
+             <div class="border border-primary" style="width:500px;height:350px;">  
                <div class="row" style="">
                  
                   <div class="col">
@@ -16,21 +16,33 @@
                     <h5>{{ user.first_name }} {{ user.last_name }}</h5>
                     <p>{{ user.gender }}</p>
                     <p>{{ user.location }}</p>  
-                    <p>{{ user.biography }}</p>
+                    
                    </div> 
+                   
+             </div> 
+             <div class="row"> 
+               <p>  </p><h5>     About Me <br/></h5> 
+                <p><br/> {{ user.biography }} </p> 
+             </div>
+              <div class="row"> 
+                   <div class="col"></div> 
+                   <div class="row"> 
                    <div class="col">
-                     <button class="btn btn-primary">Follow</button>
-                   </div> 
-                   <div>
-                       <button class="btn-success">Send Message</button>
-                   </div>
+                     <button class="btn btn-primary">Follow</button> 
+                    </div> 
+                    <div class="col">
+                     <button class="btn-success">Send Message</button> 
+                     </div>
+                   </div>  
+                   <div class="col"></div> 
+                </div>
              </div> 
              </div>
              <p>
                 
              </p>
            
-        </table>
+        </div>
       {% endif %}
      
     {% endblock %}
